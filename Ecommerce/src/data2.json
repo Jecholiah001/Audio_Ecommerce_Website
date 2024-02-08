@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "icon": "./assets/image-category-thumbnail-headphones.png",
+        "title": "HEADPHONES"
+    },
+
+    {
+        "id": 2,
+        "icon": "./assets/image-category-thumbnail-speakers.png",
+        "title": "SPEAKERS"
+    },
+
+    {
+        "id": 3,
+        "icon": "./assets/image-category-thumbnail-earphones.png",
+        "title": "EARPHONES"
+    }
+]
