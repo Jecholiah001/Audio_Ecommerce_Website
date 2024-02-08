@@ -1,5 +1,23 @@
 [
   {
+    "id": 10,
+    "icon": "./assets/image-category-thumbnail-headphones.png",
+    "title": "HEADPHONES"
+},
+
+{
+    "id": 11,
+    "icon": "./assets/image-category-thumbnail-speakers.png",
+    "title": "SPEAKERS"
+},
+
+{
+    "id": 12,
+    "icon": "./assets/image-category-thumbnail-earphones.png",
+    "title": "EARPHONES"
+},
+
+  {
     "id": 1,
     "slug": "yx1-earphones",
     "name": "YX1 Wireless Earphones",
