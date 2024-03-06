@@ -10,7 +10,6 @@ import SpeakerDetails from '../pages/SpeakerDetails'
 import EarphoneDetails from '../pages/EarphoneDetails'
 import HeadphoneDetails from '../pages/HeadphoneDetails'
 import Checkout from '../pages/Checkout'
-// import Modal from '../pages/Modal'
 import Cart from '../pages/Cart'
 
 
@@ -27,7 +26,6 @@ function Links({data}) {
                 <Route path='/earphones/:id' element={<EarphoneDetails data={data}/>}/>
                 <Route path='/cart' element={<Cart data={data}/>} /> 
                 <Route path='/checkout' element={<Checkout data={data}/>}/> 
-                {/* <Route path='/modal' element={<Modal data={data}/>}/> */}
             </Routes>
         </>
     )
