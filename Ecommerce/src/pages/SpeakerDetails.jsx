@@ -39,7 +39,7 @@ function SpeakerDetails({ data }) {
     return (
         <div className={`font-custom`}>
         <Header/>
-        <Link to='/speaker'>
+        <Link to='/speakers'>
             <button className='xl:ml-[150px] lg:ml-12 ml-9 lg:mt-20 mt-10 text-[15px] font-[400]  leading-[25px] opacity-[50%]'>Go Back</button>
         </Link>
         <div className='grid md:grid-cols-2  grid-cols-1 xl:gap-20 lg:gap-2 mt-8 mb-16 xl:mx-[150px] lg:mx-12 mx-9'>

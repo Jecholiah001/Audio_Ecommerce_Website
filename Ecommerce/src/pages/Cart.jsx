@@ -12,6 +12,8 @@ const calculateTotal = (cart) => {
     return cart.reduce((total, product) => total + (product.price * product.quantity), 0);
     };
 
+    const totalQuantity = cart.reduce((total, product) => total + product.quantity, 0);
+
     const cartItems = cart.filter(product => product.quantity > 0);
 
     return (
@@ -19,7 +21,7 @@ const calculateTotal = (cart) => {
         <div className='fixed inset-0 bg-black opacity-50 z-10' onClick={toggleCart}></div>
         <div className="font-custom fixed top-28 xl:right-36 lg:right-12 right-9 h-100% xl:w-[25%]  lg:w-[35%] md:w-[48%] w-[84%] z-10 text-black bg-white p-6 flex flex-col space-y-4 rounded-tl-lg rounded-tr-lg rounded-bl-lg rounded-br-lg">
         <div className="flex justify-between items-center">
-            <h2 className="md:text-[18px] text-[14px] font-[700] leading-[25px] tracking-[1.3px]">CART({cartItems.length})</h2>
+            <h2 className="md:text-[18px] text-[14px] font-[700] leading-[25px] tracking-[1.3px]">CART({totalQuantity})</h2>
             <button onClick={clearCart} className="md:text-[15px] text-[12px] font-[400]  leading-[25px] opacity-[70%] underline  hover:text-deepOrange">
             Remove All
             </button>

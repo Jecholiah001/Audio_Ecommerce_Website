@@ -28,6 +28,9 @@ function Header({ data }) {
     setIsMenuOpen(false);
   };
 
+ // Calculate total quantity in the cart
+  const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
+
   return (
     <>
       <nav className='font-custom bg-lighterBlack text-white flex justify-between py-[20px] xl:px-[150px] md:px-12 px-9 relative'>
@@ -88,9 +91,9 @@ function Header({ data }) {
 
         <div className='flex items-center' onClick={toggleCart}>
           <FaShoppingCart className='my-3' />
-          {!!cart.length && (
+          {!!totalQuantity && (
             <span className='bg-deepOrange px-2 rounded-full ml-2'>
-              {cart.length}
+              {totalQuantity}
             </span>
           )}
         </div>
