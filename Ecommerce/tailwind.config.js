@@ -11,7 +11,7 @@ export default {
       textColor: [ 'responsive', 'hover', 'focus', 'active'],
 
       fontFamily:{
-        custom:['Manrope']
+        custom:['Manrope, sans-serif']
       },
 
       colors:{
@@ -25,6 +25,8 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 }
 

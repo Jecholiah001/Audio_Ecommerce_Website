@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import Header from '../components/Header'
@@ -7,12 +8,12 @@ import Subdetails from '../components/Subdetails'
 import Audiogear from '../components/Audiogear'
 import Shop from '../components/Shop'
 
-function Home() {
+function Home({data}) {
     return (
         <div>
             <div className='bg-lighterBlack'>
-            <Header/>
-            <hr className='mx-[150px]'/>
+            <Header data={data}/>
+            <hr className='text-gray-500 opacity-15 xl:mx-[150px] lg:mx-12 mx-9'/>
             <Hero/>
             </div>
             <Shop/>

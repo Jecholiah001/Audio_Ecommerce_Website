@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import {Routes, Route } from 'react-router-dom'
@@ -8,20 +9,25 @@ import Earphones from '../pages/Earphones'
 import SpeakerDetails from '../pages/SpeakerDetails'
 import EarphoneDetails from '../pages/EarphoneDetails'
 import HeadphoneDetails from '../pages/HeadphoneDetails'
+import Checkout from '../pages/Checkout'
+// import Modal from '../pages/Modal'
+import Cart from '../pages/Cart'
 
 
-
-function Links() {
+function Links({data}) {
     return (
         <>
             <Routes>
-                <Route path='/' element={<Home/>}/>
-                <Route path='/headphones' element={<Headphones/>}/>
-                <Route path='/speakers' element={<Speakers/>}/>
-                <Route path='/earphones' element={<Earphones/>}/> 
-                <Route path='/headphones/:id' element={<HeadphoneDetails/>}/>    
-                <Route path='/speakers/:id' element={<SpeakerDetails/>}/>
-                <Route path='/earphones/:id' element={<EarphoneDetails/>}/>
+                <Route path='/' element={<Home data={data}/>}/>
+                <Route path='/headphones' element={<Headphones data={data}/>}/>
+                <Route path='/speakers' element={<Speakers data={data}/>}/>
+                <Route path='/earphones' element={<Earphones data={data}/>}/> 
+                <Route path='/headphones/:id' element={<HeadphoneDetails data={data}/>}/>    
+                <Route path='/speakers/:id' element={<SpeakerDetails data={data}/>}/>
+                <Route path='/earphones/:id' element={<EarphoneDetails data={data}/>}/>
+                <Route path='/cart' element={<Cart data={data}/>} /> 
+                <Route path='/checkout' element={<Checkout data={data}/>}/> 
+                {/* <Route path='/modal' element={<Modal data={data}/>}/> */}
             </Routes>
         </>
     )
