@@ -3,7 +3,6 @@
 import React, { useState, useEffect} from "react";
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import Modal from "./Modal";
 import { useCart } from '../components/CartContext'
 import { Link } from 'react-router-dom'
 import { useForm } from 'react-hook-form';
@@ -96,7 +95,14 @@ const Checkout = () => {
                 <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
                   <div className="flex flex-col space-y-2">
                     <h3 className="text-[12px] font-[700] leading-[16px] tracking-[0.5px]">Name</h3>
-                    <input type="text" name="name" placeholder="name" className="border md:w-[280px] py-2 pl-5 mb-4 rounded-tl-lg rounded-tr-lg rounded-bl-lg rounded-br-lg placeholder:text-[12px] placeholder-opacity-[50%]"/>
+                    {errors.name?.type === 'required' && (
+                    <p className='text-error text-[12px]'>
+                      This field is required
+                    </p>
+                    )}
+                    <input type="text" name="name" placeholder="name" {...register('name', { required: true })} className={`border md:w-[280px] py-2 pl-5 mb-4 rounded-tl-lg rounded-tr-lg rounded-bl-lg rounded-br-lg placeholder:text-[12px] placeholder-opacity-[50%] ${
+                  errors.name ? 'border-red-500' : 'border-deepGrey'
+                }`}/>
                   </div>
                   <div className="flex flex-col space-y-2">
                     <h3 className="text-[12px] font-[700] leading-[16px] tracking-[0.5px]">Email Address</h3>

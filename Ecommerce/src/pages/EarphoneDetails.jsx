@@ -130,7 +130,7 @@ function EarphoneDetails({ data }) {
                 {/* Desktop View */}
                 <img src={desktop || product?.image.desktop} className='w-full rounded-tl-lg rounded-tr-lg rounded-bl-lg rounded-br-lg hidden lg:block' alt={product?.name}/>
                 <h1 className="lg:text-[24px] text-[18px] uppercase text-center font-[700] leading-[33px] tracking-[1.7px] mt-10">{name}</h1>
-                <Link to={`../:id`}>
+                <Link>
                   <button className='bg-deepOrange hover:bg-lightOrange text-white  lg:text-[13px] text-[9px] leading-[17px] tracking-[1px] py-3 px-7 md:my-10 my-5 mx-auto'>SEE PRODUCT</button>
                 </Link>
               </div>
