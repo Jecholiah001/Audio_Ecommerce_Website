@@ -18,6 +18,12 @@ const Checkout = () => {
   const { cart, clearCart} = useCart();
   const [paymentMethod, setPaymentMethod] = useState('eMoney');
   const firstCartItem = cart[0];
+
+  const [showModalItems, setShowModalItems] = useState(cart.slice(0, 1));
+
+  const handleViewLess = () => {
+    setShowModalItems(cart.slice(0, 1));
+  };
   
 
 

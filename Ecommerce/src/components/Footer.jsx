@@ -20,7 +20,7 @@ function Footer() {
             <div className='flex md:flex-row flex-col justify-between '>
                 <h3 className='font-[400] md:text-[15px] text-[#FFFFFF] text-[13px] leading-[25px] opacity-[50%]'> Copyright 2021. All Rights Reserved</h3>
                 <div className='flex items-center justify-center w-6 h-6 xl:mr-[45px] gap-4 lg:-mt-16 md:mr-[55px] md:mx-0 md:mt-0 mx-auto mt-9'>
-                    <img src='/assets/desktop/icon-facebook.svg'/>
+                    <img  className='hover:text-deepOrange' src='/assets/desktop/icon-facebook.svg'/>
                     <img src='/assets/desktop/icon-twitter.svg'/>
                     <img src='/assets/desktop/icon-instagram.svg'/>
                 </div>
